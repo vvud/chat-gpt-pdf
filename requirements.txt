@@ -1,0 +1,12 @@
+chromadb
+flask
+flask-cors
+flask-jwt-extended
+langchain
+langchain-openai
+openai
+PyMuPDF
+python-dotenv
+pypdf4
+pdfplumber
+tiktoken

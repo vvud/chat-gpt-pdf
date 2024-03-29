@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Magentiz | Demo HondaBot</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Magentiz Demo Chatbot" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="chatbot-container">
+        <div id="header">
+            <h1>Honda Bot 🏍️</h1>
+        </div>
+        <div id="chatbot">
+            <div class="conversation-container">
+                <div id="conversation" class="conversation">
+                    <div class="chatbot-message">
+                        <p class="chatbot-text">Hello, I 'm Honda Bot! 👋 What can I help you?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="input-form">
+              <message-container>
+                <input id="input-field" class="question-input" type="text" placeholder="Type your message here">
+                <button id="submit-button" class="question-submit" type="submit">
+                  <svg class="send-icon" viewBox="0 0 32 32">
+                    <use xlink:href="#icon-send" />
+                </svg>
+                </button>
+              </message-container>
+            </div>
+        </div>  
+    </div>
+
+    <div class="validate-access-form">
+        <div id="app" class="ui-modal" data-state="idle" autocomplete="off" action="">
+            <div class="ui-icon">
+              <div class="ui-lock"></div>
+            </div>
+            <div class="ui-title">Enter access code</div>
+            <div class="ui-subtitle">
+              <span data-show="idle">
+                Please enter the access code to view this link.
+              </span>
+              <span data-show="validating">
+                Validating...
+              </span>
+              <span data-show="error" class="ui-error">
+                Invalid code
+              </span>
+              <span data-show="success">
+                <a class="ui-link" href="https://xstate.js.org" target="_blank">xstate.js.org</a>
+              </span>
+            </div>
+            <div class="ui-password">    
+              <input type="password" name="" id="access-code" class="ui-password-input" placeholder="Access code" onkeypress="checkKeyPress(event)" />
+            </div>
+            <button class="ui-submit" onclick="submitAccessCode()">Submit</button>
+        </div>
+    </div>
+      
+    <!-- Symbols -->
+    <svg>        
+        <!-- Send icon -->
+        <symbol id="icon-send" viewBox="0 0 23.97 21.9">
+            <title>Send</title>
+            <path d="M0.31,9.43a0.5,0.5,0,0,0,0,.93l8.3,3.23L23.15,0Z"/>
+            <path d="M9,14.6H9V21.4a0.5,0.5,0,0,0,.93.25L13.22,16l6,3.32A0.5,0.5,0,0,0,20,19l4-18.4Z"/>
+        </symbol>
+        
+        <!-- Avatar icon -->
+        <symbol id="avatar" viewBox="0 0 20 20">
+            <title>Avatar</title>
+            <path fill="#4d4d4d" fill-rule="evenodd" d="M9.997 4.31a6.29 6.29 0 00-5.681 3.575c-.053-.005-.104-.016-.158-.016-.942 0-1.7.758-1.7 1.7v2.101c0 .942.758 1.7 1.7 1.7.054 0 .105-.011.158-.016.068.14.138.28.217.417.309.551 1.134.079.815-.467a5.369 5.369 0 011.2-6.802c2-1.678 4.904-1.678 6.903 0s2.505 4.542 1.2 6.802l-.015.024-.009.023s-.634 1.402-1.878 1.402l-1.576-.014a.807.807 0 00-.666-.366H9.49a.82.82 0 00-.821.823c0 .28.178.494.586.494h3.493c1.867 0 2.675-1.833 2.712-1.918v-.005c.078-.136.147-.275.214-.415.055.005.109.017.165.017.942 0 1.7-.759 1.7-1.7V9.567c0-.942-.758-1.7-1.7-1.7-.054 0-.105.01-.158.016a6.267 6.267 0 00-1.627-2.1A6.305 6.305 0 009.997 4.31zm-2.05 2.987c-.365-.024-.7.054-.992.361a4.56 4.56 0 00-1.26 3.126c0 .98.328 2.079.88 2.12.786.056 2.027-.46 3.424-.46 1.48 0 2.787.58 3.562.442.47-.083.744-1.205.744-2.102a4.561 4.561 0 00-1.261-3.126c-.78-.82-1.856 0-3.044 0-.743 0-1.442-.32-2.052-.36zM7.774 9.32a.787.787 0 110 1.573.787.787 0 010-1.573zm4.453 0a.787.787 0 110 1.573.787.787 0 010-1.573z" />
+        </symbol>
+    </svg>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
